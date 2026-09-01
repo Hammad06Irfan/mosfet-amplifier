@@ -1,0 +1,61 @@
+.title KiCad schematic
+.include "C:/Users/hamma/Downloads/nmos_t.txt"
+.save all
+.probe alli
+.probe p(XQ3)
+.probe p(R20)
+.probe p(R19)
+.probe p(C2)
+.probe p(R23)
+.probe p(V4)
+.probe p(V5)
+.probe p(R24)
+.probe p(R18)
+.probe p(R17)
+.probe p(XQ2)
+.probe p(V3)
+.probe p(V1)
+.probe p(R16)
+.probe p(R15)
+.probe p(XQ1)
+.probe p(C1)
+.probe p(C3)
+.probe p(XQ4)
+.probe p(C4)
+.probe p(R25)
+.probe p(R21)
+.probe p(R22)
+.probe p(R13)
+.probe p(C5)
+.probe p(R12)
+.probe p(V2)
+.probe p(R14)
+XQ3 Net-_Q3-D_ Net-_Q2-D_ GND GND nmos_3p3 w=30u l=0.5u
+R20 GND Net-_Q2-D_ 350k
+R19 Net-_Q2-D_ Net-_R19-Pad2_ 350k
+C2 Net-_Q3-D_ Net-_Q4-G_ 10u
+R23 Net-_Q3-D_ Net-_R19-Pad2_ 25k
+V4 Net-_R19-Pad2_ GND DC 3.3 
+V5 Net-_Q4-D_ GND DC 3.3 
+R24 Net-_Q4-G_ Net-_Q4-D_ 400k
+R18 Net-_Q2-D_ Net-_R17-Pad2_ 70k
+R17 Net-_Q2-G_ Net-_R17-Pad2_ 565k
+XQ2 Net-_Q2-D_ Net-_Q2-G_ GND GND nmos_3p3 w=60u l=5u
+V3 Net-_R17-Pad2_ GND DC 3.3 
+V1 Net-_R13-Pad2_ GND DC 3.3 
+R16 GND Net-_Q2-G_ 200k
+R15 Net-_Q1-D_ Net-_R13-Pad2_ 40.2k
+XQ1 Net-_Q1-D_ Net-_Q1-G_ GND GND nmos_3p3 w=45u l=1u
+C1 Net-_Q1-D_ Net-_Q2-G_ 10u
+C3 Vout Net-_C3-Pad2_ 10u
+XQ4 Net-_Q4-D_ Net-_Q4-G_ Vout GND nmos_3p3 w=30u l=0.5u
+C4 GND Net-_C3-Pad2_ 2p
+R25 GND Net-_Q4-G_ 1Meg
+R21 GND Vout 10k
+R22 GND Net-_C3-Pad2_ 10k
+R13 Net-_Q1-G_ Net-_R13-Pad2_ 630k
+C5 Net-_C5-Pad1_ Net-_Q1-G_ 10u
+R12 Net-_R12-Pad1_ Net-_C5-Pad1_ 50
+V2 Net-_R12-Pad1_ GND DC 0 SIN( 0 0.55m 1k 0 0 0 ) AC 1  
+R14 GND Net-_Q1-G_ 200k
+.end
