@@ -55,21 +55,21 @@ To satisfy the $1.5\text{ V}_{pp}$ swing without violating per-stage gain ($\le 
 ### 1. AC Frequency Response (Gain & Bandwidth)
 ![AC Analysis](images/ac_analysis.png)
 
-*Figure 2: AC gain vs. frequency showing a flat mid-band gain of $60\text{ dB}$ and a $-3\text{ dB}$ cutoff at $\approx 2.0\text{ MHz}$.*
+*Figure 2: AC gain vs. frequency showing a flat mid-band gain of 60 dB and a -3 dB cutoff at ≈ 2.0 MHz.*
 
 ### 2. Large-Signal Transient Response (Output Swing)
 ![Transient Analysis](images/transient_analysis.png)
 
-*Figure 3: Output voltage swing across $R_L = 10\text{ k}\Omega \parallel C_L = 2\text{ pF}$ driven by a $0.55\text{ mV}$ input sine wave at $1\text{ kHz}$. Peak-to-peak output swing is $2.0\text{ V}_{pp}$ ($1.12\text{ V}$ to $3.15\text{ V}$) without triode or cutoff distortion.*
+*Figure 3: Output voltage swing across R<sub>L</sub> = 10 kΩ || C<sub>L</sub> = 2 pF driven by a 0.55 mV input sine wave at 1 kHz. Peak-to-peak output swing is 2.0 V<sub>pp</sub> (1.12 V to 3.15 V) without triode or cutoff distortion.*
 
 ---
 
 ## Design Trade-Off Analysis
 
-* **Gain vs. Power:** With transconductance $g_m \propto \sqrt{I_D}$, achieving $60\text{ dB}$ under $1\text{ mW}$ ($I_{total} \le 303\ \mu\text{A}$) required operating individual gain stages at low quiescent currents ($40\text{--}65\ \mu\text{A}$) and using larger load resistors ($R_D$).
-* **Gain vs. Bandwidth ($GBW$):** Higher drain resistance lowers the dominant pole frequency ($f_p \approx 1/(2\pi R_D C_T)$). Channel lengths were kept small ($0.5\ \mu\text{m} \text{ to } 1.0\ \mu\text{m}$) to minimize gate-source/gate-drain capacitances, sustaining a $2\text{ MHz}$ bandwidth.
-* **Linearity vs. Voltage Headroom:** Distributing the gain across three Common-Source stages lessened the signal swing burden per stage, preventing early saturation/triode distortion and enabling a clean $2.0\text{ V}_{pp}$ swing on a single $3.3\text{ V}$ supply rail.
-* **Current Allocation vs. Load Sensitivity:** Nearly half of the total current budget ($120\ \mu\text{A}$) was allocated to the Stage 4 Common-Drain buffer, reducing its output resistance ($R_{out} \approx 833\ \Omega$) to limit gain degradation under a $10\text{ k}\Omega$ load to $7.7\%$.
+* **Gain vs. Power:** With transconductance $g_m \propto \sqrt{I_D}$, achieving 60 dB under 1 mW ($I_{total} \le 303\ \mu\text{A}$) required operating individual gain stages at low quiescent currents (40–65 µA) and using larger load resistors ($R_D$).
+* **Gain vs. Bandwidth (GBW):** Higher drain resistance lowers the dominant pole frequency ($f_p \approx \frac{1}{2\pi R_D C_T}$). Channel lengths were kept small (0.5 µm to 1.0 µm) to minimize gate-source/gate-drain capacitances, sustaining a 2 MHz bandwidth.
+* **Linearity vs. Voltage Headroom:** Distributing the gain across three Common-Source stages lessened the signal swing burden per stage, preventing early saturation/triode distortion and enabling a clean 2.0 V<sub>pp</sub> swing on a single 3.3 V supply rail.
+* **Current Allocation vs. Load Sensitivity:** Nearly half of the total current budget (120 µA) was allocated to the Stage 4 Common-Drain buffer, reducing its output resistance ($R_{out} \approx 833\ \Omega$) to limit gain degradation under a 10 kΩ load to 7.7%.
 
 ---
 
